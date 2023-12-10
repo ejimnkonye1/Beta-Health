@@ -18,7 +18,7 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
-        <ul>
+        <ul id="navMenu">
             <li class="dropdown">
                 <a class="dropdown-item" href="#">What we Treat <i class="fa-solid fa-caret-down"></i></a>
                 <div class="dropdown-content">
@@ -35,7 +35,7 @@
                 </div>
             </li>
             <li class="active">
-                <a class="">Get Started</a>
+                <a class="" href="login.html">Get Started</a>
             </li>
         </ul>
     </nav>
@@ -45,7 +45,28 @@
     
         menubar.addEventListener('click', () => {
             navList.classList.toggle('show');
+
+            // Add this script to your HTML
+const navItems = document.getElementById('navMenu').getElementsByTagName('li');
+
+
+
         });
+        // Add this script to your HTML
+const navItems = document.getElementById('navMenu').getElementsByTagName('li');
+
+for (let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener('mouseover', function () {
+        // Remove 'active' class from all items
+        for (let j = 0; j < navItems.length; j++) {
+            navItems[j].classList.remove('active');
+        }
+
+        // Add 'active' class to the current item
+        this.classList.add('active');
+    });
+}
+
     </script>
     <div class="hero">
     <div class="hero-section">
@@ -53,7 +74,14 @@
             <h1>Health care that you<br/> can reply on</h1>
             <p>We offer affordable and efficient health care to you.</p>
            <div class="doc-btn">
-            <button class="doc">See a doctor</button>
+            <button class="doc" onclick="LoginPage()">See a doctor</button>
+            <script>
+                function LoginPage() {
+                    // Change 'login.html' to the actual URL of your login page
+                    window.location.href = 'login.html';
+                }
+            </script>
+        
             </div>
         </div>
         <div class="image-column">
@@ -71,7 +99,7 @@
             <div class="content">
                 <img src="./images/undraw_doctors_p6aq 1.png" alt="Specialist 1">
                 <div class="text">
-                    <h2>Know Your Specialist</h2>
+                    <h4>Know Your Specialist</h4>
                     <p>Learn more about our specialists and their expertise.</p>
                 </div>
             </div>
@@ -83,7 +111,7 @@
             <div class="content">
                 <img src="./images/undraw_booked_re_vtod 1.png" alt="Specialist 2">
                 <div class="text">
-                <h2>Book an Appointment</h2>
+                <h4>Book an Appointment</h4>
                 <p>Schedule an appointment with our specialists.</p>
                 </div>
             </div>
@@ -95,7 +123,7 @@
             <div class="content">
                 <img src="./images/undraw_join_re_w1lh 1.png" alt="Specialist 2">
                 <div class="text">
-                <h2>Join Our Team</h2>
+                <h4>Join Our Team</h4>
                 <p>You are welcomed to work with us.</p>
                 </div>
             </div>
@@ -107,7 +135,7 @@
             <div class="content">
                 <img src="./images/undraw_blog_post_re_fy5x 1.png" alt="Specialist 2">
                 <div class="text">
-                <h2>Blog</h2>
+                <h4>Blog</h4>
                 <p>Take care of your health.</p>
                 </div>
             </div>
@@ -177,9 +205,9 @@
     
         
         <div class="testimonial">
-            <h4>John Doe</h4>
+            <h4>Mae Bitru</h4>
             <i class="fas fa-quote-left quote-icon"></i>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac justo nec urna ullamcorper hendrerit.</p>
+            <p>I had a life-changing experience after consulting with the health experts on BetaHealth. They provided me with personalised advice that significantly improved my well-being</p>
             <div class="rating">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -191,9 +219,9 @@
         </div>
     
         <div class="testimonial">
-            <h4>Jane Smith</h4>
+            <h4>Andra Micheal</h4>
             <i class="fas fa-quote-left quote-icon"></i>
-            <p>Sed et lectus nec dui ullamcorper hendrerit. Integer commodo tellus nec turpis aliquam, vel facilisis sapien feugiat.</p>
+            <p>I was amazed by the expertise of the consultants on this website. Their knowledge went beyond my expectations, and I felt confident in following their recommendations</p>
             <div class="rating">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -205,9 +233,9 @@
         </div>
     
         <div class="testimonial">
-            <h4>Bob Johnson</h4>
+            <h4>Adaeze Obil</h4>
             <i class="fas fa-quote-left quote-icon"></i>
-            <p>Nulla facilisi. Vestibulum vel elit at urna posuere varius. Vivamus euismod, mi vel ullamcorper tristique, elit enim sodales libero.</p>
+            <p>The consultants tailored a care plan specifically for me, considering my unique needs and preferences. It made a significant difference in my health journey</p>
             <div class="rating">
                 <span class="star">&#9733;</span>
                 <span class="star">&#9733;</span>
@@ -264,8 +292,14 @@
     <!-- 4th column -->
     <div>
         <h3>Contact Us</h3>
-        <p>Email: info@example.com</p>
-        <p>Phone: +123 456 789</p>
+        <p>betahealth@gmail.com</p>
+        <p>Phone: +234 803 000 0000 
+
+
+
+
+
+        </p>
         <div class="social-icons">
             <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
             <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>

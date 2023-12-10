@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<div class="login">
+<div class="login-container">
+    <div class="image-container">
+        <img src="./images/Rectangle 42.png" alt="Background Image"/>
+    </div>
+    <div class="form-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="signInForm">
+                <label for="username" class="user">Username:</label>
+                <input type="text" id="email" name="username" placeholder="Email Address" required>
+                <br/>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                   <br/>
+                   <div class="forget">
+                    <a href="">Forgotten password</a>
+                   </div>
+                   <div class="btn">
+                <button type="submit">Login</button>
+                   </div>
+                <div class="sign">
+                    <a href="">Don't have an account?Sign up</a>
+                   </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyAUxXByak8xOoQgKAsv637M66p8txLk1vA",
+        authDomain: "beta-health-f1173.firebaseapp.com",
+        projectId: "beta-health-f1173",
+        storageBucket: "beta-health-f1173.appspot.com",
+        messagingSenderId: "73304572408",
+        appId: "1:73304572408:web:0abd99d409f709fef5560d",
+        measurementId: "G-ZGD24E0DDY"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+    const signInForm = document.getElementById('signInForm');
+
+    signInForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+            console.log('User signed in:', user);
+            // You can redirect the user or perform other actions after successful sign-in
+        } catch (error) {
+            console.error('Error signing in:', error.message);
+            // Handle the error, display it to the user, etc.
+        }
+    });
+</script>
+
+</html>

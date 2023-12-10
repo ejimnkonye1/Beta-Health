@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="signup"> 
+        <div class="signup-container"> 
+            <div class="image-container">
+                <img src="./images/Rectangle 42.png" alt="Background Image"/>
+            </div>
+            <div class="form-container">
+                <div class="signup-form"> 
+                    <h2>Signup</h2>
+                    <form id="signupForm">
+                        <label for="first_name">First Name:</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+
+                        <label for="last_name">Last Name:</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                         <br/>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        <br/>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required autocomplete="new-password">
+                        <br/>
+                        <label for="confirm_password">Confirm Password:</label>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required autocomplete="new-password">
+                        <br/>
+                        <div class="agree">
+                            <input type="checkbox" id="agree_terms" name="agree_terms" required>
+                            <label for="agree_terms">I agree with terms</label>
+                        </div>
+
+                        <div class="btn">
+                            <button type="submit">Signup</button>
+                        </div>
+                        <div class="sign">
+                            <a href="#">Already have an account? Sign in</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    const firebaseConfig = {
+  apiKey: "AIzaSyAUxXByak8xOoQgKAsv637M66p8txLk1vA",
+  authDomain: "beta-health-f1173.firebaseapp.com",
+  projectId: "beta-health-f1173",
+  storageBucket: "beta-health-f1173.appspot.com",
+  messagingSenderId: "73304572408",
+  appId: "1:73304572408:web:0abd99d409f709fef5560d",
+  measurementId: "G-ZGD24E0DDY"
+};
+
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const auth = getAuth(app);
+
+    const signupForm = document.getElementById('signupForm');
+
+    signupForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        function validateForm() {
+            const firstName = document.getElementById('first_name').value;
+            const lastName = document.getElementById('last_name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            
+            if (firstName === "" || lastName === "" || email === "" || password === "" || confirmPassword === "") {
+                alert("All fields are required.");
+                return false;
+            }
+
+            if (password.length < 8) {
+                alert("Password must be at least 8 characters.");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // If all checks pass, proceed with signup
+          
+            return false; // Prevent default form submission
+        }
+
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+            const user = userCredential.user;
+            console.log('User created:', user);
+            // You can redirect the user or perform other actions after successful signup
+            window.location.href = 'Dashboard.html';
+        } catch (error) {
+            console.error('Error creating user:', error.message);
+            // Handle the error, display it to the user, etc.
+        }
+    });
+</script>
+
+</html>
