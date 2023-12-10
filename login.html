@@ -70,6 +70,7 @@
             const user = userCredential.user;
             console.log('User signed in:', user);
             // You can redirect the user or perform other actions after successful sign-in
+            window.location.href = 'Dashboard.html';
         } catch (error) {
             console.error('Error signing in:', error.message);
             // Handle the error, display it to the user, etc.
