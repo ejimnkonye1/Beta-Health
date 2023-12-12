@@ -8,56 +8,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="">
-        <img src='./images/Frame 164.png' alt="Logo">
-        
-        
-        </div>
-        <ul id="">
-            
-            <li>
-                <a class="">Switch Profile</a>
-            </li>
-            
-            <li class="">
-                <a class="" onclick="logout()">Logout</a>
-            </li>
-        </ul>
-    </nav>
 <div class="app">
-    <div class="">
+    <div class="menubar">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="gray">
+        <div class="img">
+            <img src='./images/Frame 164.png' alt="Logo">
+            
+            
+            </div>
+            <nav>
+            
         <ul class="nav-links">
             <li>
                 <a href="#">
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-user" style="color: blue;"></i>
                     My Profile
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa-solid fa-file"></i>
+                    <i class="fa-solid fa-file" ></i>
                     My Results
                 </a>
             </li>
             <li>
-                <a href="#">
-                    <i class="fa-solid fa-book"></i>
-                    Subscription
+                <a href="#" style="text-wrap: nowrap">
+
+                    <i class="fa-solid fa-file-medical" ></i>
+                    Health Document
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa-solid fa-file-medical"></i>
-                    Health Document
+                    <i class="fa-solid fa-book" ></i>
+                    Subscription
                 </a>
             </li>
+         
         </ul>
+            </nav>
+            <script>
+                const menubar = document.querySelector('.menubar');
+                const navList = document.querySelector('ul');
+            
+                menubar.addEventListener('click', () => {
+                    navList.classList.toggle('show');
+        
+                    // Add this script to your HTML
+        const navItems = document.getElementById('navMenu').getElementsByTagName('li');
+        
+        
+        
+                });
+                </script>
     </div>
-<div class="">
+<div class="user">
     <div class="">
-        <p id="welcomeUser">Welcome User</p>
+         <div class="logout">
+            <button  style="color: #fff;" class="" onclick="logout()">Logout</button>
+         </div>
+        
+      
+        <p style="color: rgb(51, 51, 169);" id="welcomeUser">Welcome User</p>
+       
     </div>
+
     <div class="content">
        
 
@@ -69,7 +88,7 @@
                 <img src='./images/Frame 109.png ' alt="Image 3">
             </div>
             <div class="">
-             <h3> Blood Pressure</h3>
+             <h3 style="color: #000000;"> Blood Pressure</h3>
             </div>
         </div>
         <div class="rounded-border">
@@ -83,12 +102,12 @@
              <h3>Pulse</h3>
             </div>
         </div>
-        <div class="rounded-border">
-            <div class="image-container">
-             <p>Speak with a doctor about your healthb concern</p>
+        <div class="rounded-border" id="round">
+            <div class="image-container" id="left">
+             <p class="left">Speak with a doctor about your healthb concern</p>
             </div>
-            <div class="image-container">
-                <a href="#">Speak with a Doctor       <i  class="fa-solid fa-arrow-right"></i></a>
+            <div class="image-container" id="left">
+                <a style="color: #fff; text-decoration: none;" href="#"> Speak with a Doctor       <i  class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i>  </a>
             
                </div>
             <div class="image-containers">
@@ -99,6 +118,44 @@
 
         
     </div>
+    <div class="">
+        <h4 style="color:rgb(35, 35, 171); ;">Appointment records</h4>
+    <div class="appoint">
+    <div class="date">
+        <h4>Date</h4>
+        <p id="date"></p>
+    </div>
+
+    <div class="time">
+        <h4>Time</h4>
+        <p id="time"></p>
+    </div>
+    <div class="basic">
+        <h4>Basics</h4>
+        <p id="basic">General checkup</p>
+    </div>
+    <div class="status">
+        <h4>Status</h4>
+        <p id="status">Online</p>
+    </div>
+    </div>
+    </div>
+    <script>
+        function updateDateTime() {
+            const currentDate = new Date();
+            document.getElementById('date').innerText = currentDate.toDateString();
+            document.getElementById('time').innerText = currentDate.toLocaleTimeString();
+        }
+
+        // setInterval(updateDateTime, 1000); // Update every second
+        
+        updateDateTime();
+
+        // You can change the status dynamically based on your requirements
+        // For example, you can fetch it from a server or set it based on some conditions.
+        // For simplicity, it's set to "Online" here.
+        document.getElementById('status').innerText = "Online";
+    </script>
 </div>
 </div>
 
@@ -107,11 +164,11 @@
 
  
 </body>
-<script>
+<!-- <script>
     document.addEventListener('DOMContentLoaded', function () {
         alert('This website is still in development.');
     });
-</script>
+</script> -->
 <script type="module">
      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
     import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
@@ -151,4 +208,9 @@
         });
     }
 </script>
+<!-- <footer>
+    <div class="beta">
+        <p>All Rights Reserved Beta Health</p>
+    </div>
+</footer> -->
 </html>

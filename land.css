@@ -53,21 +53,49 @@ body {
         nav   .dropdown-content {
             display: none;
             position: absolute;
-            background-color: #2c3e50;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            /* background-color: #2c3e50; */
+            /* box-shadow: 0 8px 16px rgba(0,0,0,0.2); */
             z-index: 1;
+      
+            top: 10%;
         }
 
    nav     .dropdown-content a {
-            color: #ecf0f1;
-            padding: 12px 16px;
+            color: #105161;
+            /* padding: 10px 10px; */
             display: block;
             text-decoration: none;
+           
         }
+        
 
         .dropdown:hover .dropdown-content {
             display: block;
         }
+
+
+/* Style for the custom dropdown items */
+.custom-dropdown-item {
+    display: block;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.custom-dropdown:hover {
+    display: block;
+}
+
+.custom-dropdown-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Change the background color on hover for the links */
+.custom-dropdown-item:hover {
+    background-color: #ddd;
+}
 
         @media (max-width: 768px) {
             .menubar {
@@ -97,20 +125,21 @@ body {
             }
             
         }
-     nav ul li   a {
-            text-decoration: none;
-            color: #000000; /* Adjust the color as needed */
-            padding: 10px;
-            transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
-        }
+nav ul .dropdown.link{
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+}
 
-        nav ul li.active a,
-        nav ul li a:hover {
-            background-color: #2980b9;
-            color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-        }
+nav ul .dropdown.link.active,
+nav ul .dropdown.link:hover {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
         
         /* .active a {
             background-color: #2980b9;
@@ -184,9 +213,7 @@ body {
     .hero{
         width: 100%;
     }
-    .text-column {
- 
-    }
+  
     .image-column{
         display: none;
     }
@@ -260,7 +287,7 @@ body {
 .how-it-works-section {
     display: flex;
     flex-direction: column;
-    background-color: #3498db; 
+    background-color: #E0E0E0; 
 }
 
 .blue-background {
@@ -390,10 +417,10 @@ body {
 }
 
 .testimonial {
-    background-color: #3498db;
+    background-color: #E0E0E0;
     padding: 20px;
     border-radius: 10px;
-    color: #fff;
+    color: #4d259c;
     text-align: center;
 }
 

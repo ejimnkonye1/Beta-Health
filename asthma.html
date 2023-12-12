@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BetaHealth</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="land.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body>
+  
+  
+    <nav>
+      <img src='./images/Frame 164.png' alt="Logo">
+      <div class="menubar">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
+      <ul id="navMenu">
+          <li class="dropdown link">
+              <a class="dropdown-item" href="#">What we Treat <i class="fa-solid fa-caret-down"></i></a>
+              <div class="dropdown-content">
+                  <!-- Dropdown content here -->
+                  <div class="custom-dropdown-item">
+                      <a href="./asthma.html">Asthma</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="./acidReflux.html">Acid Reflux</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="./constipation.html">Constipation</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="./cholesterol.html">Cholesterol</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="./diabetes.html">Diabetes</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="./genharpes.html">Genharpes</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="./hypertension.html">Hypertension</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="./migrane.html">Migraine</a>
+                  </div>
+              
+          </li>
+          <li class="dropdown link">
+              <a class="">Get a plan</a>
+          </li>
+          <li class="dropdown link">
+              <a class="dropdown-item" href="#"></i> About Us <i class="fa-solid fa-caret-down"></i></a>
+              <div class="dropdown-content">
+                  <!-- Dropdown content here -->
+                  <div class="custom-dropdown-item">
+                      <a href="">Our Mission</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="">Features</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="">Blog</a>
+                  </div>
+                  <div class="custom-dropdown-item">
+                      <a href="">Faq's</a>
+                  </div>
+              </div>
+          </li>
+          <li class="dropdown link active">
+              <a class="" href="login.html">Get Started</a>
+          </li>
+      </ul>
+  </nav>
+  <script>
+      const menubar = document.querySelector('.menubar');
+      const navList = document.querySelector('ul');
+  
+      menubar.addEventListener('click', () => {
+          navList.classList.toggle('show');
+
+          // Add this script to your HTML
+const navItems = document.getElementById('navMenu').getElementsByTagName('li');
+
+
+
+      });
+      // Add this script to your HTML
+const navItems = document.getElementById('navMenu').getElementsByTagName('li');
+
+for (let i = 0; i < navItems.length; i++) {
+  navItems[i].addEventListener('mouseover', function () {
+      // Remove 'active' class from all items
+      for (let j = 0; j < navItems.length; j++) {
+          navItems[j].classList.remove('active');
+      }
+
+      // Add 'active' class to the current item
+      this.classList.add('active');
+  });
+}
+
+  </script>
+  <section class="disease-content">
+    <p>Explore Our Treatment Expertise</p>
+    <h2>Asthma</h2>
+</section>
+
+<section>
+    <img src="./images/asthma.png" class="disease-img" alt="Asthma illustration" />
+    <article>
+        <h2>A Comprehensive Guide to Understanding Asthma</h2>
+        <h2>What is Asthma?</h2>
+        <p>
+            Asthma is a chronic respiratory condition characterized by inflammation and narrowing of the airways.
+            Recurring episodes of wheezing, breathlessness, chest tightness, and coughing are common symptoms.
+        </p>
+
+        <h2>Symptoms of Asthma:</h2>
+        <ol>
+            <li>
+                Wheezing: A distinctive high-pitched whistling sound, often heard during exhalation.
+            </li>
+            <li>
+                Shortness of Breath: Difficulty getting enough air into the lungs, leading to breathlessness.
+            </li>
+            <li>
+                Coughing: Persistent coughing, particularly at night or early morning.
+            </li>
+            <li>
+                Complications: Untreated asthma can result in serious complications, including heart disease, stroke,
+                kidney damage, and other vascular issues.
+            </li>
+            <li>
+                Chest Tightness: Described as a sensation of pressure or tightness in the chest.
+            </li>
+        </ol>
+
+        <p>
+            If you have concerns about your respiratory health, seek consultation with our healthcare professionals.
+            Accurate diagnosis and a personalized treatment plan await you.
+        </p>
+    </article>
+</section>
+
+<section class="appointment">
+    <div><a href="#" class="aptn-btn">Book an Appointment</a></div>
+</section>
+<div class="subscribe-container">
+  <div class="center">
+  <h2 style="color: #fff;">Subscribe to Our Newsletter</h2>
+  <div class="subscribe-form">
+      <input type="text" placeholder="Name">
+      <input type="email" placeholder="Email">
+
+      <button>Subscribe now</button>
+  </div>
+</div>
+</div>
+<footer>
+<!-- 1st column -->
+<div>
+    <img src="./images//Frame 164.png" alt="Logo">
+   <p>Over 100 million people have access to our doctors at a reduced cost through our health plan. We’re available 24/</p>
+</div>
+
+<!-- 2nd column -->
+<div>
+    <h3>About Us</h3>
+    <ul>
+        <li><a href="#">Our Mission</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">FAQ'S</a></li>
+    </ul>
+</div>
+
+<!-- 3rd column -->
+<div>
+    <h3>Legal</h3>
+    <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Newsletter</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+    </ul>
+</div>
+
+<!-- 4th column -->
+<div>
+    <h3>Contact Us</h3>
+    <p>betahealth@gmail.com</p>
+    <p>Phone: +234 803 000 0000 
+
+
+
+
+
+    </p>
+    <div class="social-icons">
+        <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a>
+    </div>
+</div>
+<div class="bottom-line"></div>
+<div class="right">All Rights Reserved Beta Health</div>
+</footer>
+  </body>
+</html>
