@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BETA HEALTH</title>
+  <link rel="stylesheet" href="plan.css">
+  <link rel="stylesheet" href="land.css">
+  </head>
+  <body>
+    <nav>
+        <img src='./images/Frame 164.png' alt="Logo">
+        <div class="menubar">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul id="navMenu">
+            <li class="dropdown link">
+                <a class="dropdown-item"  href="#">What we Treat <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <!-- Dropdown content here -->
+                    <div class="custom-dropdown-item">
+                        <a href="./asthma.html">Asthma</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="./acidReflux.html">Acid Reflux</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="./constipation.html">Constipation</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="./cholesterol.html">Cholesterol</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="./diabetes.html">Diabetes</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="./genharpes.html">Genharpes</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="./hypertension.html">Hypertension</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="./migrane.html">Migraine</a>
+                    </div>
+                
+            </li>
+            <li class="dropdown link">
+                <a class="">Get a plan</a>
+            </li>
+            <li class="dropdown link">
+                <a class="dropdown-item" href="#"></i> About Us <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <!-- Dropdown content here -->
+                    <div class="custom-dropdown-item">
+                        <a href="">Our Mission</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="">Features</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="">Blog</a>
+                    </div>
+                    <div class="custom-dropdown-item">
+                        <a href="">Faq's</a>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown link active">
+                <a class="" href="login.html">Login</a>
+            </li>
+        </ul>
+        <script>
+            
+        </script>
+    </nav>
+    <script>
+        const menubar = document.querySelector('.menubar');
+        const navList = document.querySelector('ul');
+    
+        menubar.addEventListener('click', () => {
+            navList.classList.toggle('show');
+
+            // Add this script to your HTML
+const navItems = document.getElementById('navMenu').getElementsByTagName('li');
+
+
+
+        });
+        // Add this script to your HTML
+const navItems = document.getElementById('navMenu').getElementsByTagName('li');
+
+for (let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener('mouseover', function () {
+        // Remove 'active' class from all items
+        for (let j = 0; j < navItems.length; j++) {
+            navItems[j].classList.remove('active');
+        }
+
+        // Add 'active' class to the current item
+        this.classList.add('active');
+    });
+}
+
+    </script>
+    <div class="maindiv">
+      
+
+      <div class="doctor1">Speak to a Doctor from <span class="purple">anywhere you are in the world</span></div>
+      <div>
+        <img src="./images/Rectangle 1.png" alt="" />
+      </div>
+      <br />
+      <!-- choose your plan section -->
+
+      <h3 class="firsth3">choose your plan: <span class="black">pricing options</span></h3>
+      <br />
+
+      <div class="planning">
+        We believe that investing in your health is an investment in your
+        future. select the plan that best suits your needs and budget to begin
+        your personalized health journey:
+      </div>
+
+      <div class="mainplanning">
+      <div class="firstplanning">
+        <h2 class="h2stylig">basic plan</h2>
+        <span class="amount">N10,000/month</span>
+        <ul class="listline">
+          <li>Access to personalised health assessments.</li>
+          <li>Customised diet and fitness plan.</li>
+          <li>Health tracking tools.</li>
+        </ul>
+      </div>
+
+      <div class="firstplanning">
+        <h2 class="h2stylig">premium plan</h2>
+        <span class="amount">N50,000/month</span>
+        <ul class="listline">
+          <li>All features of the basic plan,plus:</li>
+          <li>Exclusive access to live expert consultations.</li>
+          <li>
+            Advanced wellness strategies for mental and emotional well-being.
+          </li>
+          <li>Priority customer support.</li>
+        </ul>
+      </div>
+
+      <div class="firstplanning">
+        <h2 class="h2stylig">family plan</h2>
+        <span class="amount">N100,000/month</span>
+        <ul class="listline">
+          <li>All features of the premium plan for multiple family members.</li>
+          <li>
+            Shared progress tracking for a supportive family health experience.
+          </li>
+          <li>Additional discounts on health-related products and services.</li>
+        </ul>
+      </div>
+    </div>
+      <h3 class="h3styling">
+        how it works
+      </h3>
+      <div>
+
+          <p class="pstyling"> <img src="./images/Group.png" alt="" class="goodimage"><b class="bold">Choose your plan:</b>Click on the plans that aligns with your health goals.</p>
+
+          <p class="pstyling"> <img src="./images/Group.png" alt="" class="goodimage"><b class="bold">Secure payment:</b>Provide your payment details through our secure gateway.</p>
+
+          <p class="pstyling"> <img src="./images/Group.png" alt="" class="goodimage"><b class="bold">Instant access:</b>Start your health journey immediately with instant access to your personalized plan.</p>
+      </div>
+
+      <div>
+        <h3 class="h3styling2">additional information</h3>
+        <p class="pstyling"> <img src="./images/Group.png" alt="" class="goodimage">
+          All plans with a risk-free 7-day trial period. no long-term commitment. cancel anytime.
+        </p>
+        <p class="pstyling2">
+          Invest in your well-being today and take the first step towards a healthier,happier you!
+        </p>
+        <div class="btn">
+        <button class="selectbutton">select a plan</button>
+        </div>
+      </div>
+
+      <!-- why you should get a plan section -->
+
+      <p class="getplan">
+        Why you should get a plan
+      </p>
+      <div class="mainplanning2">
+        <div class="firstplanning2">
+          <div><img src="./images/group2.png" alt="" class="iconimage"></div>
+          <h3 class="h3styling3">Expert guidance</h3>
+          <p class="pstyling3">
+            Access to expert advice can make all the difference. Our plans come with the support of health professionals, providing insights and guidance to help you make informed decisions on your wellness journey.
+          </p>
+        </div>
+
+        <div class="firstplanning2">
+          <div><img src="./images/Icon.png" alt="" class="iconimage"></div>
+          <h3 class="h3styling3">Tailored to you</h3>
+          <p class="pstyling3">
+            Our plans are not one-size-fits-all. Through a detailed assessment, we create a plan specifically tailored to your unique health needs, ensuring that every step aligns with your goals.
+          </p>
+        </div>
+
+        <div class="firstplanning2">
+          <div><img src="./images/Care Icon.png" alt="" class="iconimage"></div>
+          <h3 class="h3styling3">Continuity of care</h3>
+          <p class="pstyling3">
+            We provide continuous continuity of care for the management of chronic conditions and follow-up appointments.
+          </p>
+        </div>
+      </div>
+
+      <div class="subscribe-container">
+        <div class="center">
+        <h2 style="color: #fff;">Subscribe to Our Newsletter</h2>
+        <div class="subscribe-form">
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+    
+            <button>Subscribe now</button>
+        </div>
+    </div>
+    </div>
+    
+     
+
+
+
+    </div>
+  </body>
+  <footer>
+    <!-- 1st column -->
+    <div>
+        <img src="./images//Frame 164.png" alt="Logo">
+       <p>Over 100 million people have access to our doctors at a reduced cost through our health plan. We’re available 24/</p>
+    </div>
+
+    <!-- 2nd column -->
+    <div>
+        <h3>About Us</h3>
+        <ul>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">FAQ'S</a></li>
+        </ul>
+    </div>
+
+    <!-- 3rd column -->
+    <div>
+        <h3>Legal</h3>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+        </ul>
+    </div>
+
+    <!-- 4th column -->
+    <div>
+        <h3>Contact Us</h3>
+        <p>betahealth@gmail.com</p>
+        <p>Phone: +234 803 000 0000 
+
+
+
+
+
+        </p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram-square"></i></a>
+        </div>
+    </div>
+    <div class="bottom-line"></div>
+    <div class="right">All Rights Reserved Beta Health</div>
+</footer>
+</html>

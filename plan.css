@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* display: flex;
+    position: relative;
+    flex-direction: column; */
+    /* min-height: 100vh;
+    min-width: 100vw; */
+    /* background-color: white; */
+}
+
+.maindiv {
+ display: flex;
+position: relative;
+flex-direction: column;
+min-height: 100vh;
+min-width: 100vw;
+justify-content: center;
+align-items: center;
+align-content: center; 
+}
+
+.myheader {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+}
+
+.mylogo {
+    margin-right: 320px;
+    padding-right: 600px;
+    left: 50px;
+}
+
+.myanchors {
+    display:flex;
+    position: relative;
+    justify-content: space-between;
+    float: right;
+}
+
+.login {
+    width: 65px;
+    height: 25px;
+    background-color: #2e65bd;
+    border-radius: 5px;
+}
+
+.doctor1 {
+font-size: 48px;
+color: black;
+
+padding: 40px;
+font-weight: 700;
+}
+
+.purple {
+    color: #4838f7;
+    font-weight: 700;
+}
+
+.firsth3 {
+    font-size: 3rem;;
+color: #4838f7;
+width: 100vw;
+/* padding-left: 201px; */
+text-align: center;
+margin-top: 30px;
+text-transform: capitalize;
+
+}
+
+.black {
+    color: #000;
+}
+
+.planning {
+ font-size: 40px; 
+ color: #000;
+ padding: 70px;  
+width: 100vw;
+}
+
+.firstplanning {
+    /* display: grid; */
+    width: 300px;
+    height: 400px;
+    background-color: #9f9ad2;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.mainplanning {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+
+}
+
+
+@media (max-width: 768px) {
+    .mainplanning {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.h2stylig {
+    text-transform: capitalize;
+    font-size: 40px;
+    font-weight: bolder;
+    padding-left: 9px;
+    margin-bottom: 9px;
+}
+
+.amount {
+    color: #4838f7;
+    padding-top: 50px;
+    margin: 30px;
+    font-size: 20px;
+}
+
+.listline {
+    padding-left: 10px;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.h3styling {
+    text-transform: capitalize;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 20px;
+    margin: 30px;
+    color: #0000FF;
+    ;
+}
+
+.goodimage {
+    width: 20px;
+    height: 20px;
+}
+
+.pstyling {
+    padding: 20px;
+    /* margin: 40px; */
+    font-size: 36px;
+    color: #000080;
+    /* width: 1115px; */
+    /* height: 84px; */
+}
+
+.bold {
+padding: 5px;
+margin: 5px;
+font-size: 36px;
+font-weight: 600;
+font-family: Roboto;
+}
+
+.h3styling2 {
+    text-transform: capitalize;
+    font-size: 60px;
+    font-weight: 700;
+    padding: 20px;
+    /* padding-left: 280px; */
+    margin: 30px;
+    color: #0000FF;
+    text-align: center;
+
+}
+
+.pstyling2 {
+    padding: 10px;
+    /* padding-left: 160px; */
+    /* margin: 40px; */
+    font-size: 36px;
+    color: #000080;
+    /* width: 820px; */
+    /* height: 84px; */
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.selectbutton {
+    width: 211px;
+    height: 76px;
+    border-radius: 24px;
+    background-color: #2E65BD;
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    /* margin-left: 390px; */
+}
+
+.getplan {
+    /* width: 1205px; */
+    height: 70px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #0000FF;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 50px;
+    /* padding-left: 270px; */
+}
+
+.iconimage {
+    /* width: 173px; */
+    /* height: 173px; */
+    margin: 30px;
+}
+
+.mainplanning2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .mainplanning2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .getplan {
+        margin-bottom: 90px;
+    }
+}
+.firstplanning2 {
+    /* width: 387px; */
+    /* height: 664px; */
+    margin: 10px;
+    /* padding: 10px; */
+}
+
+.h3styling3 {
+    /* width: 395px; */
+    /* height: 56px; */
+    font-size: 48px;
+    font-weight: 700;
+    padding-left: 20px;
+    margin: 10px;
+}
+
+.pstyling3 {
+    /* width: 387px;
+    height: 342px; */
+    font-size: 32px;
+    font-weight: 400;
+    padding: 20px;
+    margin: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

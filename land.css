@@ -61,7 +61,7 @@ body {
         }
 
    nav     .dropdown-content a {
-            color: #105161;
+           
             /* padding: 10px 10px; */
             display: block;
             text-decoration: none;
@@ -69,9 +69,12 @@ body {
         }
         
 
-        .dropdown:hover .dropdown-content {
+        .dropdown:hover  .dropdown-content  {
             display: block;
+            transition: display 0s 15s;
+           
         }
+        
 
 
 /* Style for the custom dropdown items */
